@@ -3,14 +3,14 @@ import Header from './Header'
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVATAR } from '../utils/constants';
 
 const Login = () => {
     const [isSignInForm,setIsSignInForm] = useState(true);
     const [errorMessage,setErrorMessage]=useState(null);
-    const navigate = useNavigate();
+    
     const dispatch = useDispatch();
     
 
@@ -37,7 +37,7 @@ const Login = () => {
                     // Signed up 
                     const user = userCredential.user;
                     updateProfile(user, {
-                        displayName: name.current.value, photoURL: "https://wallpapers.com/images/featured/cool-profile-pictures-4co57dtwk64fb7lv.jpg"
+                        displayName: name.current.value, photoURL:USER_AVATAR 
                     }).then(() => { 
                         const { uid, email, displayName, photoURL } = auth.currentUser;
                         dispatch(
@@ -48,11 +48,11 @@ const Login = () => {
                                     displayName: displayName,
                                     photoURL: photoURL
                                 }));
-                        navigate('/browse');
+                    
                     }).catch((error) => {
                         setErrorMessage(error.message)
                     });
-                    console.log(user);
+                
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -66,8 +66,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user)
-                    navigate('/browse');
                     
                 })
                 .catch((error) => {
@@ -83,7 +81,7 @@ const Login = () => {
     <div>
         <Header />
         <div className='absolute'>
-          <img className='bg-black' src='https://assets.nflxext.com/ffe/siteui/vlv3/335ddde7-3955-499c-b4cc-ca2eb7e1ae71/a7d20bc1-831c-4f9d-8153-11bdf7a08d23/IN-en-20240624-POP_SIGNUP_TWO_WEEKS-perspective_WEB_13cda806-d858-493e-b4aa-f2792ff965dc_large.jpg'
+              <img className='bg-gradient-to-br from-black' src='https://assets.nflxext.com/ffe/siteui/vlv3/335ddde7-3955-499c-b4cc-ca2eb7e1ae71/a7d20bc1-831c-4f9d-8153-11bdf7a08d23/IN-en-20240624-POP_SIGNUP_TWO_WEEKS-perspective_WEB_13cda806-d858-493e-b4aa-f2792ff965dc_large.jpg'
           alt='back'
           />
         </div>
