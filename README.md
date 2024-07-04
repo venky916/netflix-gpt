@@ -28,3 +28,9 @@
 - updateStore with Trailer Video
 - Embedded the YouTube Vide and made it autoPlay & mute
 - Tailwind Classes to make main container Look Awesome
+- Secondary Container 
+- Build movieList 
+- Build moviCards
+- TMDB Image CDN
+- Made the Browse Page good with TailwindCSS 
+- custome hook usePopularMovie
