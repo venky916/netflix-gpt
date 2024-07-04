@@ -34,3 +34,6 @@
 - TMDB Image CDN
 - Made the Browse Page good with TailwindCSS 
 - custome hook usePopularMovie
+- GPT Search page
+- GPt Searach Bar
+- MultiLanguage Feature in GPT Page
