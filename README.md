@@ -37,3 +37,11 @@
 - GPT Search page
 - GPt Searach Bar
 - MultiLanguage Feature in GPT Page
+- Get Gemini AI API KEY
+- Get Search API Call
+-  Fetched gptMovieSuggestions from TMDB 
+- created gptSlice added data
+- Resued MovieList List Component to make movieSuggestion container
+- Memoization
+- added .env file and added it on gitignore
+- Made our site Responsive at the End
