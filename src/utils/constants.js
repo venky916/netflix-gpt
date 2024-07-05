@@ -6,7 +6,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMWI1MDc1YTdlOTk2YjIyOGE3YzVhMzk0MjQ5YzY2MiIsIm5iZiI6MTcyMDAxNDU3NC4wOTA1Mywic3ViIjoiNjY4NTU0ZTg0ZjI0ZTdlOTgyMTdjZjJkIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.4B-cNdjR2yqvhbcrG-CW3y5JKK5KALJS3dHd7uMG4M0'
+        Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY,
     }
 };
 
@@ -17,6 +17,6 @@ export const BG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/335ddde7-3955-
 export const SUPPORTED_LANGUAGES = [{identifier: "en",name:"English"},
                                     { identifier: "hindi", name: "Hindi" },
                                     { identifier: "spanish", name: "Spanish" },
-                                    ]
+                                    ];
 
-                                    
+export const API_KEY = process.env.REACT_APP_API_KEY;
