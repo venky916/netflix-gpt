@@ -65,16 +65,14 @@ const Login = () => {
             //sign in logic
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
-                    // Signed in 
-                    const user = userCredential.user;
-                    
+                    // const user = userCredential.user;
+                    // console.log(user)
                 })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     setErrorMessage(errorCode + "-" + errorMessage);
                 });
-
         }
     }
 
@@ -82,7 +80,7 @@ const Login = () => {
     <div>
         <Header />
         <div className='absolute'>
-              <img className='bg-gradient-to-br from-black h-screen object-cover' src={BG_URL}
+              <img className='bg-gradient-to-br from-black h-screen md:w-screen object-cover' src={BG_URL}
           alt='back'
           />
         </div>
