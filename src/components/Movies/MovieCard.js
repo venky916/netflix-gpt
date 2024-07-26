@@ -7,6 +7,12 @@ const MovieCard = (props) => {
 
   const handleMovieInfo = (movie) => {
     dispatch(addMovieInfo(movie));
+    const scrollY =
+      document.documentElement.style.getPropertyValue("--scroll-y");
+    const body = document.body;
+    body.style.position = "fixed";
+    body.style.width = "100vw";
+    body.style.top = `-${scrollY}`;
   }
 
   if (!props.movie.poster_path) return null;

@@ -6,10 +6,22 @@ const VideoTitle = ({ title, overview, mainMovie }) => {
   const dispatch = useDispatch();
   const handleMovieInfoPage = () => {
     dispatch(addMovieInfo(mainMovie));
+    const scrollY =
+      document.documentElement.style.getPropertyValue("--scroll-y");
+    const body = document.body;
+    body.style.position = "fixed";
+    body.style.width = "100vw";
+    body.style.top = `-${scrollY}`;
   };
   const handleMovieInfoVideo = () => {
     dispatch(addMovieInfo(mainMovie));
     dispatch(setMovieInfoTrailerPage(true));
+    const scrollY =
+      document.documentElement.style.getPropertyValue("--scroll-y");
+    const body = document.body;
+    body.style.position = "fixed";
+    body.style.width = "100vw";
+    body.style.top = `-${scrollY}`;
   };
   return (
     <div className='w-screen aspect-video pt-[18%] px-6 md:px-24 absolute text-white bg-gradient-to-r from-black'>
