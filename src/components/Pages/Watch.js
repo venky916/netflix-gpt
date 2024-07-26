@@ -17,7 +17,7 @@ const Watch = () => {
   return (
     <div className='w-screen h-screen relative'>
       <div className='w-full h-full'>
-        <VideoTitle title={original_title} overview={overview} />
+        <VideoTitle title={original_title} overview={overview} mainMovie={recommendedMovies[0]} />
         <VideoBackground movieId={id} className='h-5/6' />
         <div className='bg-black -mt-20 absolute z-10 w-full overflow-x-scroll'>
           <MovieList title={"Recommended Movies"} movies={recommendedMovies} />
