@@ -1,9 +1,15 @@
 import React from 'react'
-import GptSearchBar from '../components/GptSerachBar';
+
+import GptSearchBar from './GptSerachBar';
 import GptMovieSuggestions from './GptMovieSuggestions'
-import { BG_URL } from '../utils/constants';
+import { BG_URL } from '../../utils/Constants/constants';
+import { useDispatch } from 'react-redux';
+import { addGptMovieResult } from '../../utils/Slices/gptSlice';
 
 const GptSearch = () => {
+  const dispatch = useDispatch();
+  dispatch(addGptMovieResult([null,null]));
+
   return (
     <>
     <div className='fixed -z-10 '>
