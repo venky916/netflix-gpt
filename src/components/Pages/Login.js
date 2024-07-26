@@ -117,11 +117,11 @@ const Login = () => {
                 />
             </div>
             <form className='w-9/12 md:w-3/12 absolute p-12 bg-black text-white m-36 mx-auto left-0 right-0 rounded-lg bg-opacity-85 my-auto top-0 bottom-0 h-[75%]' onSubmit={(e) => e.preventDefault()}>
-                <h1 className='font-bold text-2xl py-1'>
+                <h1 className='font-bold text-2xl py-2'>
                     {isSignInForm ? "Sign In" : "Sign Up"}
                 </h1>
-                {!isSignInForm && (<input ref={fullName} type='text' placeholder='Full Name' className='p-4 my-2 w-full bg-gray-800 rounded-md' />)}
-                <input ref={email} type='text' placeholder='Email Address' className='p-4 my-2 w-full bg-gray-800 rounded-md ' />
+                {!isSignInForm && (<input ref={fullName} type='text' placeholder='Full Name' className='p-4 my-4 w-full bg-gray-800 rounded-md' />)}
+                <input ref={email} type='text' placeholder='Email Address' className='p-4 my-4 w-full bg-gray-800 rounded-md ' />
 
                 <div className="relative">
                     <input
@@ -145,8 +145,8 @@ const Login = () => {
                 </div>
                 <p className='text-red-700 font-bold text-lg line-clamp-1'>{errorMessage}</p>
                 <button className='p-4 my-4 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
-                {isSignInForm ? <p className='py-1 cursor-pointer'>New to Netflix ? <span className='underline' onClick={toggleSignInForm}>SignUp</span> Now </p> : <p className='py-1 cursor-pointer'>Already Registered ? <span className='underline' onClick={toggleSignInForm}>SignIn</span> Now </p>}
-                <div className='flex justify-center items-center relative bg-white w-full rounded-lg py-2 hover:border-blue-600 hover:border-2'>
+                {isSignInForm ? <p className='py-1 my-1 cursor-pointer'>New to Netflix ? <span className='underline' onClick={toggleSignInForm}>SignUp</span> Now </p> : <p className='py-1 my-1 cursor-pointer'>Already Registered ? <span className='underline' onClick={toggleSignInForm}>SignIn</span> Now </p>}
+                <div className='flex justify-center items-center relative bg-white w-full rounded-lg py-2 my-2 hover:border-blue-600 hover:border-2'>
                     <img src={GOOGLE_IMG} alt='' className='px-1' />
                     <button className=' text-black px-1' onClick={signInWithgoogle}>Sigin in with Google</button>
                 </div>
