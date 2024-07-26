@@ -86,10 +86,11 @@ Netflix GPT is a feature-rich web application that replicates the Netflix fronte
     ```
 
 # Deployment
-To deploy the app to production, use the following - - -  command:
-    ``` bash
-    npm run build
-    ```
+To deploy the app to production, use the following  
+    command:
+        ``` bash
+        npm run build
+        ```
     
 # Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
