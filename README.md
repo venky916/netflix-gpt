@@ -1,6 +1,6 @@
-# Netflix GPT
+# Getfix GPT
 
-Netflix GPT is a feature-rich web application that replicates the Netflix frontend experience with additional AI-powered movie suggestions using GPT technology. This project is built using React, TailwindCSS, Firebase, Redux, and integrates with the TMDB API for movie data and Gemini AI API for GPT-based recommendations.
+Getfix GPT is a feature-rich web application that replicates the Getfix frontend experience with additional AI-powered movie suggestions using GPT technology. This project is built using React, TailwindCSS, Firebase, Redux, and integrates with the TMDB API for movie data and Gemini AI API for GPT-based recommendations.
 
 ## Features
 

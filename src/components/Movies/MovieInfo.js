@@ -38,7 +38,7 @@ const MovieInfo = () => {
 
   return (
     <div className='relative bg-black mx-auto text-white rounded-lg border border-gray-400 w-1/2 aspect-video overflow-x-hidden overflow-y-scroll no-scrollbar-custom'>
-      <RxCrossCircled className='fixed top-20 right-10 text-3xl' onClick={handleMovieInfoPage} />
+      <RxCrossCircled className='fixed top-20 right-10 text-4xl cursor-pointer' onClick={handleMovieInfoPage} />
       {!movieInfoTrailerPage ?
         (<div className='p-4'>
           <h1 className='font-bold text-2xl my-2 mb-3' >

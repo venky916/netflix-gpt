@@ -33,7 +33,7 @@ const Browse = () => {
         )
       }
       {page && (
-        <div className='fixed top-10 flex items-center justify-center z-50 backdrop-blur-sm w-full h-full'>
+        <div className='fixed inset-0 flex items-center justify-center z-50 backdrop-blur-sm w-full h-full'>
           <MovieInfo />
         </div>
       )

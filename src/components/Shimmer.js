@@ -27,7 +27,7 @@ const Shimmer = () => {
         <>
             {ShimmerCols.map((el,idx)=>(
                 <div key={"shimmer" + idx} className="p-6 mx-auto w-[93%] bg-black">
-                    <h1 className='animate-pulse bg-gradient-to-r from-slate-100 text-2xl font-bold my-1 h-7 w-[60%]'></h1>
+                    <div className='animate-pulse bg-gradient-to-r from-slate-100 text-2xl font-bold my-1 h-7 w-[60%]'></div>
                     <div className='flex justify-start items-start gap-3 overflow-x-scroll w-full no-scrollbar-custom'>
                         <ShimmerCard />
                     </div>

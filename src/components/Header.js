@@ -46,7 +46,7 @@ const Header = () => {
     return () => {
       unsubscribe();
     }
-  }, [])
+  }, [dispatch,navigate])
 
   const handleGptSearchClick = () => {
     //Toggle GPT Search
@@ -64,25 +64,49 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute px-8 py-1 md:py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row justify-between'>
-      <img className=" w-44 mx-auto md:mx-0" src={LOGO}
-        alt='logo'
-      />
-      {user && (<div className='flex p-2 justify-between'>
-        {showGptSearch && (
-          <select className='p-2 m-2 bg-gray-800 text-white' onChange={handleLanguageChange} ref={language} >
-            {SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier} > {lang.name} </option>)}
-          </select>
-        )}
-        <button className='py-2 px-4 mx-4 my-2 bg-purple-600 text-white rounded-md' onClick={handleGptSearchClick}> {showGptSearch ? 'HomePage' : 'GPT Search'}</button>
-        <button className='text-white py-2 px-4 mx-4 my-2 rounded-md bg-red-800' onClick={handleNavigate}>NetFlixSearch</button>
-        <img className='hidden md:block w-12 h-12' alt='usericon' src={user.photoURL} />
-        <button className='font-bold text-white' onClick={handleSignOut}>(Sign Out)</button>
-      </div>
-      )
-      }
+    <div className="absolute px-8 py-1 md:py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row justify-between">
+      <img className=" w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+      {user && (
+        <div className="flex justify-between">
+          {showGptSearch && (
+            <select
+              className="p-2 m-2 bg-gray-800 text-white"
+              onChange={handleLanguageChange}
+              ref={language}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {" "}
+                  {lang.name}{" "}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            className="py-2 px-4 mx-4 my-2 bg-purple-600 text-white rounded-md"
+            onClick={handleGptSearchClick}
+          >
+            {" "}
+            {showGptSearch ? "HomePage" : "GPT Search"}
+          </button>
+          <button
+            className="text-white py-2 px-4 mx-4 my-2 rounded-md bg-red-800"
+            onClick={handleNavigate}
+          >
+            GetfixSearch
+          </button>
+          <img
+            className="hidden md:block w-12 h-12"
+            alt="usericon"
+            src={user.photoURL}
+          />
+          <button className="font-bold text-white text-sm" onClick={handleSignOut}>
+            Logout
+          </button>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default Header
