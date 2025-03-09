@@ -20,9 +20,11 @@ const GptSerachBar = ({ setLoading }) => {
       "Act as a Movie Recommendation System and suggest some movies for the query " +
       searchText.current.value +
       ". only give me names of 5 movie, comma seperated like the example result given ahead. Example Result: Don,3 idiots,Munna Bhai MBBS,Bahubali,Avengers";
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    // console.log(model,"model")
     const result = await model.generateContent(gptQuery);
     const response = await result.response;
+    // console.log(response,"response")
     const text = response.text();
     const gptMovies = text.split(",");
 

@@ -19,7 +19,7 @@ const MovieCard = (props) => {
   // if (!props.movie.title.includes(props.title)) return null;
   // console.log(props,props.movie,props.title);
   return (
-    <div className='w-36 gap-2 md:w-48 pr-4 md:rounded-md hover:-translate-y-2 hover:scale-90 transition-all' key={props.movie.id}>
+    <div className='w-36 gap-2 md:w-48 pr-4 md:rounded-md hover:-translate-y-2 hover:scale-90 transition-all cursor-pointer' key={props.movie.id}>
       <img alt='moviCard' src={IMG_CDN + props.movie.poster_path} onClick={() => handleMovieInfo(props.movie)} />
       <p className="text-gray-300 font-semibold text-xs md:text-sm line-clamp-1 w-32 sm:w-40 md:w-48">
         {props.movie.title}

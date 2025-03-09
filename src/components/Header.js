@@ -64,7 +64,7 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute px-8 py-1 md:py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row justify-between">
+    <div className="absolute px-8 py-1 md:py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row justify-between items-center">
       <img className=" w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
         <div className="flex justify-between">
@@ -100,7 +100,7 @@ const Header = () => {
             alt="usericon"
             src={user.photoURL}
           />
-          <button className="font-bold text-white text-sm" onClick={handleSignOut}>
+          <button className="font-bold text-white text-sm ml-1" onClick={handleSignOut}>
             Logout
           </button>
         </div>
